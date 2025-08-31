@@ -20,8 +20,16 @@ pip install -r requirements.txt
 
 ## サーバー起動
 
+### Python
+
 ```bash
 python manage.py runserver
+```
+
+### Docker
+
+```bash
+docker compose up
 ```
 
 ## データベース
