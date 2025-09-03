@@ -38,3 +38,9 @@ docker compose up
 ## データベース
 
 db.sqlite3
+
+## メモ
+
+`Waitress`は静的ファイルを自動配信しない．
+`docker compose`で起動時は，`Waitress`で動作するようにしており，`static`フォルダーのデータは読み込まれない．
+`python app.py`も同様となっている．
