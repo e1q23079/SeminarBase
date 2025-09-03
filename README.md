@@ -29,6 +29,9 @@ python manage.py runserver
 ### Docker
 
 ```bash
+# ビルド
+docker compose build
+# 起動
 docker compose up
 ```
 
