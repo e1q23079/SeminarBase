@@ -4,5 +4,7 @@
 
 {% block content %}
 <h1>{{ article.title }}</h1>
-<p>{{ article.content }}</p>
+<div>
+    <p>{{ article.content | safe }}</p>
+</div>
 {% endblock %}
