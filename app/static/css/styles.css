@@ -39,3 +39,10 @@ h2 {
     padding: 0.125em 0.5em;
     border-left: solid 5px #0D6EFD;
 }
+
+blockquote {
+    border-left: solid 5px #0D6EFD;
+    margin: 1em;
+    padding: 0.25em;
+    background-color: #F2F2F2;
+}
