@@ -31,3 +31,9 @@ th {
     background-color: aliceblue;
 
 }
+
+h1,
+h2 {
+    padding: 0.125em 0.5em;
+    border-left: solid 5px #0D6EFD;
+}
