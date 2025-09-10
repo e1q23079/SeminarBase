@@ -19,16 +19,16 @@
     <ul class="pagination justify-content-between">
         <li class="page-item justify-content-start">
             {% if prevId %}
-            <a class="page-link" href="/seminar_base/article/{{ prevId.id }}">Previous</a>
+            <a class="page-link" href="/seminar_base/article/{{ prevId.id }}">前へ</a>
             {% else %}
-            <a class="page-link disabled" href="#">Previous</a>
+            <a class="page-link disabled" href="#">前へ</a>
             {% endif %}
         </li>
         <li class="page-item justify-content-end">
             {% if nextId %}
-            <a class="page-link" href="/seminar_base/article/{{ nextId.id }}">Next</a>
+            <a class="page-link" href="/seminar_base/article/{{ nextId.id }}">次へ</a>
             {% else %}
-            <a class="page-link disabled" href="#">Next</a>
+            <a class="page-link disabled" href="#">次へ</a>
             {% endif %}
         </li>
     </ul>
