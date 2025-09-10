@@ -15,4 +15,10 @@
 <div>
     <p>{{ article.content | safe }}</p>
 </div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-between">
+        <li class="page-item justify-content-start"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item justify-content-end"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
 {% endblock %}
