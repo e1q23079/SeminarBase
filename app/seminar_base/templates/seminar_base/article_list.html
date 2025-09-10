@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}教材選択{% endblock %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/top.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>「SeminarBase」</h1>
+<p>教材を選択してください．</p>
+
+{% for article in articles %}
+<p><a href="/seminar_base/article/{{ article.id }}" class="title">{{ article.title }}</a></p>
+{% endfor %}
+
+{% endblock %}

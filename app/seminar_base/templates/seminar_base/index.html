@@ -2,17 +2,8 @@
 
 {% block title %}トップ{% endblock %}
 
-{% block css %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/top.css' %}">
-{% endblock %}
-
 {% block content %}
 <h1>「SeminarBase」へようこそ</h1>
 <p>トップページです。</p>
-
-{% for article in articles %}
-<p><a href="/seminar_base/article/{{ article.id }}" class="title">{{ article.title }}</a></p>
-{% endfor %}
 
 {% endblock %}
