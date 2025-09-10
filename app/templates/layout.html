@@ -47,8 +47,12 @@
                 <a class="navbar-brand" href="/">SeminarBase</a>
                 <div>
                     <div class="d-flex">
-                        <span class="navbar-text userName">${userName}</span>
+                        {% if request.user.is_authenticated %}
+                        <span class="navbar-text userName">{{ request.user.username }} さん</span>
+                        <button type="button" class="btn btn-primary" onclick="location.href='/logout'">ログアウト</button>
+                        {% else %}
                         <button type="button" class="btn btn-primary" onclick="location.href='/login'">ログイン</button>
+                        {% endif %}
                     </div>
                 </div>
             </div>
