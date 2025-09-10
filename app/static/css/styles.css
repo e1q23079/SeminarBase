@@ -5,6 +5,12 @@ p code {
     padding: 3px;
 }
 
+li code {
+    background-color: #F2F2F2;
+    margin: 5px;
+    padding: 3px;
+}
+
 pre code {
     background-color: #F2F2F2 !important;
     padding: 10px;
