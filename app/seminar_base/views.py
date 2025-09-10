@@ -12,7 +12,7 @@ def article_detail(request, article_id):
     article.content = markdownify(article.content)
     contents = {
         'article': article,
-        'nextId': Article.objects.filter(id__gt=article_id).order_by('id').first(),
+        'nextId': Article.objects.filter(id__gt=article_id).order_by('id').first() if Article.objects.filter(id__gt=article_id).exists() else None,
         'prevId': Article.objects.filter(id__lt=article_id).order_by('-id').first()
 
     }
