@@ -1,3 +1,32 @@
-h1 {
-    color: red;
+/* コード */
+p code {
+    background-color: #F2F2F2;
+    padding: 5px;
+}
+
+pre {
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+
+/* 文字余白 */
+p {
+    padding: 10px;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: solid 1.5px;
+    border-color: rgb(152, 152, 152);
+    padding: 5px;
+}
+
+th {
+    background-color: aliceblue;
+
 }
