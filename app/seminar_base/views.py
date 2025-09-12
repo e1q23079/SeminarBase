@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from markdownx.utils import markdownify
 from .models import Article
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
     return render(request, 'seminar_base/index.html')
 
+@login_required
 def article_detail(request, article_id):
     article = Article.objects.get(id=article_id)
     article.content = markdownify(article.content)
@@ -17,6 +19,7 @@ def article_detail(request, article_id):
     }
     return render(request, 'seminar_base/article_detail.html', contents)
 
+@login_required
 def article_list(request):
     articles = Article.objects.all()
     return render(request, 'seminar_base/article_list.html', {'articles': articles})

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+<h1>「SeminarBase」へログイン</h1>
+<p>ログインページです。</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ログイン</button>
+</form>
+{% endblock %}
