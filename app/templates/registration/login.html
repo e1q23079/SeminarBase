@@ -2,12 +2,32 @@
 
 {% block title %}ログイン{% endblock %}
 
+{% block css %}
+<style>
+    .login_form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <h1>「SeminarBase」へログイン</h1>
 <p>ログインページです。</p>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ログイン</button>
+    <div class="login_form">
+        <div class="mb-3">
+            <label for="id_username" class="form-label">ユーザー名</label>
+            <input type="text" name="username" id="id_username" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="id_password" class="form-label">パスワード</label>
+            <input type="password" name="password" id="id_password" required class="form-control">
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">ログイン</button>
+        </div>
+    </div>
 </form>
 {% endblock %}
