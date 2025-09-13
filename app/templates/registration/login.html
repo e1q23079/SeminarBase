@@ -14,6 +14,11 @@
 {% block content %}
 <h1>「SeminarBase」へログイン</h1>
 <p>ログインページです。</p>
+{% for error in form.non_field_errors %}
+<div class="alert alert-danger" role="alert">
+    {{ error }}
+</div>
+{% endfor %}
 <form method="post">
     {% csrf_token %}
     <div class="login_form">
