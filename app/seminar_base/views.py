@@ -23,3 +23,10 @@ def article_detail(request, article_id):
 def article_list(request):
     articles = Article.objects.all()
     return render(request, 'seminar_base/article_list.html', {'articles': articles})
+
+@login_required
+def article_print(request):
+    articles = Article.objects.all()
+    for article in articles:
+        article.content = markdownify(article.content)
+    return render(request, 'seminar_base/article_print.html', {'articles': articles})
