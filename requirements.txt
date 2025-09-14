@@ -1,5 +1,9 @@
 asgiref==3.9.1
 Django==5.2.5
+django-markdown==0.8.4
+django-markdownx==4.0.9
+Markdown==3.9
+pillow==11.3.0
 sqlparse==0.5.3
 tzdata==2025.2
 waitress==3.0.2
